@@ -26,8 +26,31 @@ export const useStore = create((set) => ({
       texture: "log",
     },
   ],
-  addCube: () => {},
-  removeCube: () => {},
+  /**
+   * Adds a new cube to the state at the specified position with the current texture.
+   *
+   * @param {number} x - The x-coordinate for the new cube.
+   * @param {number} y - The y-coordinate for the new cube.
+   * @param {number} z - The z-coordinate for the new cube.
+   */
+  addCube: (x, y, z) => {
+    set((state) => ({
+      cubes: [
+        ...state.cubes,
+        { id: nanoid(), pos: [x, y, z], texture: state.texture },
+      ],
+    }));
+  },
+  /**
+   * Removes a cube from the state based on its id.
+   *
+   * @param {string} id - The id of the cube to be removed.
+   */
+  removeCube: (id) => {
+    set((state) => ({
+      cubes: state.cubes.filter((cube) => cube.id !== id),
+    }));
+  },
   setTexture: () => {},
   saveWorld: () => {},
   resetWorld: () => {},
