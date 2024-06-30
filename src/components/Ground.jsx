@@ -12,11 +12,11 @@ export function Ground() {
 
   // Get the ground texture from the configured textures.
   const groundTexture = configuredTextures.groundTexture;
-  groundTexture.repeat.set(100, 100);
+  groundTexture.repeat.set(10000, 10000);
 
   return (
     <mesh ref={ref}>
-      <planeGeometry attach="geometry" args={[100, 100]} />
+      <planeGeometry attach="geometry" args={[10000, 10000]} />
       <meshStandardMaterial attach="material" map={groundTexture} />
     </mesh>
   );
