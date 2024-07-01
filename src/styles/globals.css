@@ -11,6 +11,8 @@ body,
   padding: 0;
   user-select: none;
   overflow: hidden;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
 }
 
 body {
@@ -88,20 +90,70 @@ body {
   z-index: 10;
 }
 
-.powered {
-  background-color: aliceblue;
+button {
+  background-color: #333;
+  color: white;
   border-radius: 8px;
-  padding: 4px 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+
+.powered {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
   position: absolute;
   bottom: 30px;
   right: 30px;
 }
 
+.powered a {
+  color: white;
+  text-decoration: none;
+}
+
 .delete-tip {
-  background-color: aliceblue;
-  border-radius: 8px;
-  padding: 4px 8px;
   position: absolute;
-  bottom: 30px;
   left: 30px;
+  bottom: 30px;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  position: absolute;
+}
+
+.controls-container {
+  position: absolute;
+  bottom: 70px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.key-row {
+  display: flex;
+}
+
+#key-space {
+  width: 100px;
 }

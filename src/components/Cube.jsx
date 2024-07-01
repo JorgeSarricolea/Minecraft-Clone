@@ -86,7 +86,7 @@ export const Cube = ({ position, texture }) => {
       <boxGeometry attach="geometry" />
       <meshStandardMaterial
         attach="material"
-        color={isHovered ? "grey" : "white"}
+        color={isHovered ? "lightgrey" : "white"}
         map={textureImage}
         transparent={true}
         opacity={texture === "glass" ? 0.6 : 1}
