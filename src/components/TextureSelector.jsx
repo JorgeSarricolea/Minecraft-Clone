@@ -43,16 +43,17 @@ export const TextureSelector = () => {
 
   return (
     <div className="texture-selector">
-      {Object.entries(images).map(([imgKey, img]) => {
-        return (
+      {/* Mensaje siempre visible */}
+      {Object.entries(images).map(([imgKey, img], index) => (
+        <div key={imgKey} className="texture-item">
           <img
             className={texture === imgKey.replace("Img", "") ? "selected" : ""}
-            key={imgKey}
             src={img}
             alt={imgKey}
           />
-        );
-      })}
+          <span className="texture-number">{index + 1}</span>
+        </div>
+      ))}
     </div>
   );
 };

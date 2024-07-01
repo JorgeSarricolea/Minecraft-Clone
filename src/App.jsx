@@ -25,6 +25,13 @@ function App() {
       <Menu />
       <div className="pointer">+</div>
       <TextureSelector />
+      <span className="powered">
+        Powered by{" "}
+        <a href="https://jorgesarricolea.com" target="_blank">
+          Jorge Sarricolea
+        </a>
+      </span>
+      <span className="delete-tip">alt + click to delete a block</span>
     </>
   );
 }
