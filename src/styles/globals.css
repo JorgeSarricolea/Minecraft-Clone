@@ -34,3 +34,31 @@ body {
   opacity: 0.5;
   z-index: 0;
 }
+
+.texture-selector {
+  background-color: gainsboro;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.texture-selector.hidden {
+  display: none;
+}
+
+.texture-selector img {
+  border-radius: 4px;
+  width: 100px;
+  z-index: 100;
+  image-rendering: pixelated;
+  border: 3px solid transparent;
+}
+
+.texture-selector img.selected {
+  border-color: red;
+}

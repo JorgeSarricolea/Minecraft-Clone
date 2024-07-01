@@ -13,17 +13,43 @@ import { create } from "zustand";
  * @property {function} resetWorld - Function to reset the world to its initial state.
  */
 export const useStore = create((set) => ({
-  texture: "dirt",
+  texture: "wood",
   cubes: [
     {
       id: nanoid(),
-      pos: [1, 1, 1],
-      texture: "dirt",
+      pos: [0, 0, 1],
+      texture: "wood",
+    },
+    {
+      id: nanoid(),
+      pos: [0, 1, 1],
+      texture: "wood",
+    },
+    {
+      id: nanoid(),
+      pos: [0, 2, 1],
+      texture: "wood",
     },
     {
       id: nanoid(),
       pos: [1, 2, 1],
-      texture: "log",
+      texture: "wood",
+    },
+
+    {
+      id: nanoid(),
+      pos: [2, 0, 1],
+      texture: "wood",
+    },
+    {
+      id: nanoid(),
+      pos: [2, 1, 1],
+      texture: "wood",
+    },
+    {
+      id: nanoid(),
+      pos: [2, 2, 1],
+      texture: "wood",
     },
   ],
   /**
@@ -51,7 +77,14 @@ export const useStore = create((set) => ({
       cubes: state.cubes.filter((cube) => cube.id !== id),
     }));
   },
-  setTexture: () => {},
+  /**
+   * Sets the current selected texture.
+   *
+   * @param {string} texture - The name of the texture to set as the current selected texture.
+   */
+  setTexture: (texture) => {
+    set(() => ({ texture }));
+  },
   saveWorld: () => {},
   resetWorld: () => {},
 }));

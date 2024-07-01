@@ -17,10 +17,10 @@ function loadAndConfigureTexture(image) {
 
 // Define textures with their corresponding image sources.
 const textures = {
-  ground: grassImg,
   dirt: dirtImg,
-  log: logImg,
   glass: glassImg,
+  grass: grassImg,
+  log: logImg,
   wood: woodImg,
 };
 
